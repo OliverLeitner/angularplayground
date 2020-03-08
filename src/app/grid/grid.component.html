@@ -1,0 +1,44 @@
+<h1>Table (former DataTable aka Grid)</h1>
+<p-table [columns]="cols" [value]="data">
+  <ng-template pTemplate="caption">
+    Demo Data
+  </ng-template>
+    <!--<ng-template pTemplate="header" let-columns>
+        <tr>
+          <th *ngFor="let col of data | keyvalue">
+              {{col.key}}
+          </th>
+        </tr>
+    </ng-template>-->
+    <ng-template pTemplate="body" let-user>
+        <tr>
+            <td>{{user.id}}</td>
+            <td>{{user.name}}</td>
+            <!--<td>{{user.username}}</td>-->
+            <td>{{user.email}}</td>
+            <!--<td>{{user.phone}}</td>-->
+            <!--<td>{{user.website}}</td>-->
+        </tr>
+    </ng-template>
+</p-table>
+<h1>Data View</h1>
+<p-dataView [value]="data">
+  <ng-template let-user pTemplate="listItem">
+    <div class="ui-g">
+      <div class="ui-g-12">ID: <b>{{user.id}}</b></div>
+      <div class="ui-g-12">Name: <b>{{user.name}}</b></div>
+      <div class="ui-g-12">E-Mail: <b>{{user.email}}</b></div>
+    </div>
+  </ng-template>
+</p-dataView>
+
+<h1>Tabs aka Tab View</h1>
+<p-tabView>
+    <p-tabPanel [header]="item.username" *ngFor="let item of data; let i = index" [selected]="i == 0">
+    <div class="ui-g">
+      <div class="ui-g-12">ID: <b>{{item.id}}</b></div>
+      <div class="ui-g-12">Name: <b>{{item.name}}</b></div>
+      <div class="ui-g-12">E-Mail: <b>{{item.email}}</b></div>
+    </div>
+    </p-tabPanel>
+</p-tabView>

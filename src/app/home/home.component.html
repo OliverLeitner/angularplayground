@@ -1,0 +1,11 @@
+<p>home thing</p>
+<h1>enum test</h1>
+<div>
+  <label for="testEnum">testEnum: </label>
+  <select id="testEnum" [(ngModel)]="testObject.enumName" (change)="setEnumVal()">
+    <option *ngFor="let item of options" [value]="item">{{item}}</option>
+  </select>
+    <h1 [hidden]="testObject.enumVal == null">
+    You entered {{testObject.enumVal}}
+  </h1>
+</div>

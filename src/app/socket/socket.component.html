@@ -1,0 +1,17 @@
+<p>socket works!</p>
+<form id="socketForm" #f="ngForm" (ngSubmit)="onSubmit(f)">
+<fieldset>
+<label for="author">Author:
+  <input type="text" name="author" ngModel required #author="ngModel" placeholder="your name"/>
+</label>
+<label for="message">Message:
+  <input type="text" name="message" ngModel required #message="ngModel" placeholder="your message"/>
+</label>
+</fieldset>
+<button [disabled]="author.invalid || message.invalid">Submit</button>
+</form>
+<div *ngIf="ping">
+<h1>received data</h1>
+<p>author: {{ping.author}}</p>
+<p>message: {{ping.message}}</p>
+</div>
