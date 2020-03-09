@@ -1,9 +1,9 @@
-import { DataService } from './../services/data.service';
-import { AppComponent } from './../app.component';
 import { Component, OnInit } from '@angular/core';
-import { Data } from '../interfaces/data';
 import { Columns } from '../interfaces/columns';
+import { Data } from '../interfaces/data';
 import { demo } from '../models/demo';
+import { AppComponent } from './../app.component';
+import { DataService } from './../services/data.service';
 
 @Component({
   selector: 'app-grid',

@@ -1,6 +1,6 @@
 import { Message } from './../services/chat.service';
 export class Ping {
-  constructor(public author?: string, public message?: string){
+  constructor(public author?: string, public message?: string) {
     return this;
   }
   copy(obj: Message): Ping {

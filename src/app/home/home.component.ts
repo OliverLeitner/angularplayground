@@ -1,7 +1,7 @@
-import { AppComponent } from './../app.component';
-import { demo } from './../models/demo'; // the global object keeper
-import { testEnum } from './../enums/test.enum';
 import { Component, OnInit } from '@angular/core';
+import { AppComponent } from './../app.component';
+import { testEnum } from './../enums/test.enum';
+import { demo } from './../models/demo'; // the global object keeper
 
 @Component({
   selector: 'app-home',
@@ -28,7 +28,7 @@ export class HomeComponent implements OnInit {
 
   // operate on enum... (onChanges only works with input fields???)
   setEnumVal() {
-      this.testObject.enumVal = this.enum[this.testObject.enumName];
-      console.log(this.testObject);
+    this.testObject.enumVal = this.enum[this.testObject.enumName];
+    console.log(this.testObject);
   }
 }

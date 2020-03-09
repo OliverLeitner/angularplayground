@@ -3,7 +3,7 @@ export class Data {
     public id?: string,
     public name?: string,
     public email?: string,
-  ) {}
+  ) { }
   /*copy(obj: Data): Data {
     this.id = obj.id;
     this.name = obj.name;

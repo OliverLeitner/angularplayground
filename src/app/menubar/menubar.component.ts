@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {MenuItem} from 'primeng/api';
+import { MenuItem } from 'primeng/api';
 
 @Component({
   selector: 'app-menubar',
@@ -15,7 +15,7 @@ export class MenubarComponent implements OnInit {
       { label: 'Form', routerLink: 'form' },
       { label: 'Socket', routerLink: 'socket' },
       { label: 'Grid', routerLink: 'grid' }
-    ]
+    ];
   }
 
 }

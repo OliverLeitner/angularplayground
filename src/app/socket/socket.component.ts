@@ -1,11 +1,11 @@
-import { SocketData } from './../models/socketdata';
-import { AppComponent } from './../app.component';
 import { Component, OnInit } from '@angular/core';
-import { demo } from '../models/demo';
-import { WebsocketService } from '../services/ping.service';
-import { Message, ChatService } from '../services/chat.service';
-import { Ping } from '../models/ping';
 import { NgForm } from '@angular/forms';
+import { demo } from '../models/demo';
+import { Ping } from '../models/ping';
+import { ChatService, Message } from '../services/chat.service';
+import { WebsocketService } from '../services/ping.service';
+import { AppComponent } from './../app.component';
+import { SocketData } from './../models/socketdata';
 
 @Component({
   selector: 'app-socket',

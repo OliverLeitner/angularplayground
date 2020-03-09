@@ -1,6 +1,6 @@
-import { AppComponent } from './../app.component';
 import { Component, OnInit } from '@angular/core';
 import { demo } from '../models/demo';
+import { AppComponent } from './../app.component';
 
 @Component({
   selector: 'app-form',
@@ -16,8 +16,8 @@ export class FormComponent implements OnInit {
   }
   ngOnInit(): void {
     // fill in some data
-    this.testObject.string1 = "a first string from somewhere...";
-    this.testObject.string2 = "a second string from somewhere...";
+    this.testObject.string1 = 'a first string from somewhere...';
+    this.testObject.string2 = 'a second string from somewhere...';
   }
 
   btnClick() {

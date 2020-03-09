@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { demo } from './models/demo';
 import { MenubarComponent } from './menubar/menubar.component';
+import { demo } from './models/demo';
 
 @Component({
   selector: 'app-root',
