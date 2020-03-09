@@ -1,8 +1,8 @@
 <p>form works!</p>
 <p>{{ testObject.number1 }} + {{ testObject.number2 }} = {{ testObject.number1 + testObject.number2 }}</p>
 <ul>
-    <li>{{ testObject.string1 }}</li>
-    <li>{{ testObject.string2 }}</li>
+  <li>{{ testObject.string1 }}</li>
+  <li>{{ testObject.string2 }}</li>
 </ul>
 <p-accordion>
   <p-accordionTab header="Salads">
@@ -12,25 +12,13 @@
     Pasta...
   </p-accordionTab>
   <p-accordionTab header="Pizza" [selected]="true">
-    <p-radioButton
-      label="Double cheese 🧀🧀"
-      name="pizza"
-      value="double-cheese"
-      [(ngModel)]="pizzaSelection">
+    <p-radioButton label="Double cheese 🧀🧀" name="pizza" value="double-cheese" [(ngModel)]="pizzaSelection">
     </p-radioButton><br>
 
-    <p-radioButton
-      label="Anchovy"
-      name="pizza"
-      value="anchovy"
-      [(ngModel)]="pizzaSelection">
+    <p-radioButton label="Anchovy" name="pizza" value="anchovy" [(ngModel)]="pizzaSelection">
     </p-radioButton><br>
 
-    <p-radioButton
-      label="Meat lover's 🍖"
-      name="pizza"
-      value="meat-lover"
-      [(ngModel)]="pizzaSelection">
+    <p-radioButton label="Meat lover's 🍖" name="pizza" value="meat-lover" [(ngModel)]="pizzaSelection">
     </p-radioButton>
   </p-accordionTab>
 </p-accordion>
