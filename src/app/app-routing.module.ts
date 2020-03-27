@@ -7,11 +7,12 @@ import { SocketComponent } from './socket/socket.component';
 
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'form', component: FormComponent },
   { path: 'socket', component: SocketComponent },
-  { path: 'grid', component: GridComponent }
+  { path: 'grid', component: GridComponent },
+  { path: '**', redirectTo: 'home' }
 ];
 
 @NgModule({
