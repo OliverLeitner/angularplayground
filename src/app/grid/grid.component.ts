@@ -4,6 +4,7 @@ import { Data } from '../interfaces/data';
 import { demo } from '../models/demo';
 import { AppComponent } from './../app.component';
 import { DataService } from './../services/data.service';
+import { PrimeNGConfig } from 'primeng/api';
 
 @Component({
   selector: 'app-grid',
@@ -13,14 +14,16 @@ export class GridComponent implements OnInit {
   public testObject: demo;
   public data: Data[];
   public cols: Columns[];
+  public num: number = 0;
 
-  constructor(private appComponent: AppComponent, private dataService: DataService) {
+  constructor(private appComponent: AppComponent, private dataService: DataService, private primengConfig: PrimeNGConfig) {
     this.testObject = appComponent.testObject;
     this.testObject.title = 'grid stuff';
   }
 
-  ngOnInit(): void {
-    this.dataService.getDataSmall().then(data => this.data = data);
+  ngOnInit() {
+    this.primengConfig.ripple = true;
+    this.dataService.getDataSmall().then(data => this.data = data).then(() => this.num = 1);
   }
 
 }

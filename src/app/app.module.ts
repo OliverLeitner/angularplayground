@@ -43,7 +43,7 @@ import { SocketComponent } from './socket/socket.component';
     TabViewModule,
     MenubarModule,
     TabMenuModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
