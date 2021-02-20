@@ -21,9 +21,9 @@ export class GridComponent implements OnInit {
     this.testObject.title = 'grid stuff';
   }
 
-  ngOnInit() {
+  async ngOnInit() {
     this.primengConfig.ripple = true;
-    this.dataService.getDataSmall().then(data => this.data = data).then(() => this.num = 1);
+    await this.dataService.getDataSmall().then(data => this.data = data).then(() => this.num = 1);
   }
 
 }
